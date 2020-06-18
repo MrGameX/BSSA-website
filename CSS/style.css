@@ -1,0 +1,629 @@
+/* index.html */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.image {
+	height: 100%;
+	background: url("../images/piscine.jpg");
+	-webkit-filter: grayscale(100%) blur(1.5px);
+	background-position: center;
+	background-size: cover;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 50px;
+  
+}
+
+.topleft {
+  position: absolute;
+  top: 20px;
+  left: 16px;
+}
+
+.topright {
+  top: 25px;
+  right: 90px;
+  position: absolute;
+  font-size: 30px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.middle h1 {
+  margin-bottom: 2%;
+  text-shadow: #E20000 1px 1px, #E20000 -1px 1px, #FFFB50 -1px -1px, #FFFB50 1px -1px;
+}
+
+.middle p {
+  font-size: 35px;
+  text-shadow: #34495e 0.3px 0.3px, #34495e -0.3px 0.3px, #34495e -0.3px -0.3px, #34495e 0.3px -0.3px;
+}
+
+hr {
+  margin: 5px auto;
+  width: 40%;
+  color: black;
+}
+
+
+.button1 {
+  border: 2px solid #27ae60;
+  background-color: #27ae60;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.button1:hover {
+  background-color: #2ecc71;
+  font-size: 21px;
+  padding: 15px 32px;
+}
+
+@media screen and (max-width: 500px){
+  .bgimg {
+    font-size: 45px;
+  }
+  .middle {
+    top: 35%;
+  }
+  .middle p {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  .button1 {
+    font-size: 18px;
+  }
+  .topright {
+    right: 50px;
+  }
+}
+
+
+/* home.html */
+
+.nav-bar {
+  height: 80px;
+  background-color: #27ae60;
+  font-family: 'Righteous', cursive;
+}
+ 
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a img {
+ 	max-height: 70px;
+ 	padding-top: 5px;
+}
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+ 
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+ 
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 80px;
+  background: #27ae60;
+  color: #ffffff;
+  text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: #fbc531;
+  color: #ffffff;
+  transition: 0.3s;
+  margin-top: -5px;
+  line-height: 85px;
+}
+
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+ 
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  background: #27ae60;
+  height: 70px;
+  width: 70px;
+}
+
+.main {
+  overflow: hidden;
+  height: 500px;
+}
+
+.sauvetage {
+  height: 500px;
+  width: 100%;
+	background-image: url('../images/sauvetage.jpg');
+	opacity: 0.6;
+	background-position: center;
+	background-size: cover;
+  box-shadow: inset 0 0 300px black;
+  position: absolute;
+}
+
+.sauv_text {
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  text-align: center;
+}
+
+.sauv_text h1 {
+  margin-top: -10%;
+  bottom: 10px;
+  font-size: 50px;
+  font-family: 'Barlow', sans-serif;
+  color: #1e272e;
+}
+
+.sauv_text {
+  font-family: 'Righteous', cursive;
+  font-size: 20px;
+  color: #b33939;
+}
+
+.sauv_text button {
+  position: relative;
+  top: 30px;
+  border: 2px solid #e1b12c;
+  background-color: #e1b12c;
+  color: white;
+  padding: 16px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sauv_text button:hover {
+  background-color: #fbc531;
+}
+
+/* TEST CADRES (START) */
+
+.cards {
+  
+  height: auto;
+  width: 100%;
+  padding: 50px 0;
+  position: absolute;
+  background: #fff;
+   
+}
+
+.card_one {
+  border-radius: .25rem;
+  float: left;
+  border: 1px solid #d3d3d3;
+  height: 25%;
+  width: 25%;
+  margin-left: 20%;
+  overflow: hidden;
+}
+
+.card_two {
+  border-radius: .25rem;
+  float: right;
+  border: 1px solid #d3d3d3;
+  height: 25%;
+  width: 25%;
+  margin-right: 20%;
+}
+
+.card_one h4, .card_two h4 {
+  font-size: 30px;
+  font-family: 'Righteous';
+  font-weight: normal;
+  margin: 0px auto;
+}
+
+.card_one p, .card_two p {
+  font-size: 20px;
+  font-weight: normal;
+  font-family: 'Barlow';
+  font-style: italic;
+}
+
+.bg-img {
+  font-size: 90px;
+  text-align: center;
+  height: 180px;
+  /*background: linear-gradient(to bottom right, #27ae60, #e67e22);/* jaune: #e1b12c; vert: #27ae60;*/
+  background: 
+    linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+
+.bg-img i {
+  padding-top: 12%;
+  position: relative;
+  overflow: hidden;
+  color: #c0392b;
+}
+
+.content {
+  padding: 15px;
+}
+
+.button2 {
+  background-color: transparent;
+  border: 1px solid #2196F3;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  border-radius: .25rem;
+  text-align: center;
+  transition: 0.3s
+}
+
+.button2:hover {
+  background: #ff3f34;
+  border-color: blue;
+  color: white;
+}
+
+/* TEST CADRES (END) */
+
+.black {
+  margin-top: 80%;
+  height: 500px;
+  background: #27ae60;
+  position: relative;
+}
+
+.footer {
+  margin-top: 100px;
+}
+
+.rappel {
+  height: 100px;
+  background: black;
+}
+
+.footer ul {
+  text-align: center;
+}
+
+.footer li {
+  display: inline-block;
+}
+
+.footer li a {
+  text-decoration: none;
+  outline: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  padding: 10% 10px;
+}
+
+.copy {
+  background: red;
+  height: 30px;
+}
+
+.leg {
+  border: 1px solid black;
+  width: 20%;
+  margin-left: 15%;
+}
+
+
+/* TEST CALENDAR (START) */
+
+ul {list-style-type: none;}
+
+.calendar {
+  border: 1px solid black;
+  width: 50%;
+  margin-left: 45%;
+  position: relative;
+  top: 3%;
+  border-radius: 5px;
+}
+
+.month {
+  padding: 20px 25px;
+  background: #e1b12c;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  height: 230px;
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+.days li, .days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 9px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+.days .nov  {
+  color: red;
+}
+
+.days .dec {
+  color: green;
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+
+
+
+/* TEST CALENDAR (END) */
+
+ 
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
+ 
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  padding-left: 25%;
+   
+  }
+  nav ul li ul li a {
+    padding-left: 30%;
+  }
+ 
+  .nav-dropdown {
+    position: static;
+  }
+  .brand a img {
+    max-height: 60px;
+    margin-top: 5px;
+  }
+}
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+ 
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .sauvetage {
+    height: 600px;
+  }
+  .sauv_text button {
+    top: 10px;
+  }
+  .card_one {
+    margin-left: 0;
+    height: 200px;
+    width: 200px;
+  }
+  .card_two {
+    margin-right: 0;
+    height: 200px;
+    width: 200px;
+  }
+  .card_one h4, .card_two h4 {
+    font-size: 15px;
+    font-family: 'Righteous';
+    font-weight: normal;
+    margin: 0px auto;
+  }
+
+  .card_one p, .card_two p {
+    font-size: 15px;
+    font-weight: normal;
+    font-family: 'Barlow';
+    font-style: italic;
+  }
+  .bg-img {
+    height: 120px;
+  }
+  .bg-img i {
+    font-size: 50px;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  .sauvetage {
+    height: 600px;
+  }
+  .sauv_text h1 {
+    font-size: 40px;
+  }
+}
